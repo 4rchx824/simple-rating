@@ -28,9 +28,9 @@ const endColor: Color = {
 };
 const calculateDiff = (max: number, start: Color, end: Color): Color => {
     const diff: Color = {
-        r: parseInt(((end.r - start.r) / max) as unknown as string),
-        g: parseInt(((end.g - start.g) / max) as unknown as string),
-        b: parseInt(((end.b - start.b) / max) as unknown as string),
+        r: Math.floor((end.r - start.r) / max),
+        g: Math.floor((end.g - start.g) / max),
+        b: Math.floor((end.b - start.b) / max),
     };
 
     return diff as Color;
